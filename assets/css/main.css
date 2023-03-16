@@ -1,12 +1,12 @@
 @font-face {
   font-family: 'Aquire';
-  src: url('/assets/fonts/Aquire.otf');
+  src: url('../fonts/Aquire.otf');
   font-weight: 400;
   font-style: normal;
 }
 @font-face {
   font-family: 'Aquire';
-  src: url('/assets/fonts/AquireBold.otf');
+  src: url('../fonts/AquireBold.otf');
   font-weight: 700;
   font-style: normal;
 }
