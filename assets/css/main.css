@@ -26,10 +26,10 @@ html::after {
   width: 100vw;
   z-index: 999;
   height: 0;
-  transition: all 400ms cubic-bezier(0.60, 1, 0.9, 1); /*cubic: P1 and P2 coordinates in 0,1x0,1 system. P0 and P3 start and end*/ 
-  /* transition: >property >duration >timing-function delay|initial|inherit; */
+  transition: all 400ms cubic-bezier(0.60, 1, 0.9, 1); 
   animation: fade-out-curtain 0.5s cubic-bezier(0.60, 1, 0.9, 1) forwards;
   /* animation: >name >duration >timing-function delay iteration-count direction >fill-mode play-state; */
+  /* transition: >property >duration >timing-function delay|initial|inherit; */
 }
 @keyframes fade-out-curtain {
   0% { height: 100vh; }
@@ -161,6 +161,7 @@ header .menu-bar .menu-bar__title {
   font-size: 12px;
   text-transform: uppercase;
   letter-spacing: 0.14em;
+  padding-top: 20px;
 }
 header .menu-bar .menu-bar__personal {
   font-size: clamp(30px, 4vw, 65px);
@@ -176,7 +177,7 @@ header.menu-open .menu-bar {
 }
 main {
   padding: 0 calc(8vw + 2px);
-  contain: content;
+  /* contain: content; */
 }
 main .backdrop {
   position: fixed;
@@ -196,16 +197,16 @@ main.menu-open .backdrop {
 }
 main.menu-open {
   position: fixed;
-  overflow: hidden;
+  /* overflow: hidden; */
   height: 100vh;
 }
-main .hero {
+main #hero {
   height: 100vh;
   width: 100%;
   max-width: 1100px;
   position: relative;
 }
-main .hero .hero-holder {
+main #hero .hero-holder {
   position: absolute;
   bottom: 60px;
 }
