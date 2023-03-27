@@ -36,9 +36,7 @@ html::after {
   100% { height: 0vh; }
 }
 
-.text-blue {
-  color: blue;
-}
+.text-black, 
 a {
   color: #161616;
 }
@@ -66,14 +64,21 @@ header .logo {
   color: #161616;
   position: relative;
 }
+header .logo .text-black.switch-color {
+  color: #f8f8f8;
+}
 header .logo a {
   display: inline-block;
   border: none;
   padding: 0 6px;
   z-index: 2;
+  color: blue;
 }
 header .logo a:visited {
-  color: #161616;
+  color: blue;
+}
+header .logo a span {
+  cursor: pointer;
 }
 header .logo .letter-w {
   position: absolute;
@@ -109,6 +114,9 @@ header .menu-burger__icon .line {
   position: absolute;
   display: block;
   background: #161616;
+}
+header .menu-burger__icon .line.switch-color {
+  background: #f8f8f8;
 }
 header .menu-burger__icon .line:nth-child(1) {
   top: 5px;
@@ -167,6 +175,9 @@ header .menu-bar .menu-bar__personal {
   font-size: clamp(30px, 4vw, 65px);
   line-height: 1.4;
 }
+header .menu-bar nav {
+  padding-top: 20px;
+}
 header .menu-bar .menu__skills,
 header .menu-bar .menu__social  {
   font-size: 18px;
@@ -174,10 +185,6 @@ header .menu-bar .menu__social  {
 }
 header.menu-open .menu-bar {
   transform: translateX(0); 
-}
-main {
-  padding: 0 calc(8vw + 2px);
-  /* contain: content; */
 }
 main .backdrop {
   position: fixed;
@@ -197,7 +204,6 @@ main.menu-open .backdrop {
 }
 main.menu-open {
   position: fixed;
-  /* overflow: hidden; */
   height: 100vh;
 }
 main #hero {
@@ -205,10 +211,12 @@ main #hero {
   width: 100%;
   max-width: 1100px;
   position: relative;
+  padding: 0 calc(8vw + 2px);
 }
 main #hero .hero-holder {
-  position: absolute;
+  position: fixed;
   bottom: 60px;
+  z-index: -1;
 }
 main.initial-load .hero-text {
   visibility: hidden;
@@ -305,4 +313,20 @@ main .hero-text div:nth-child(3) .hero-text__text span:nth-child(1) {
   50% { opacity: 0.2 }
   75% { opacity: 1 }
   100% { -webkit-text-fill-color: transparent; -webkit-text-stroke-width: 1px; -webkit-text-stroke-color: #161616}
+}
+
+main #about {
+  padding-top: 160px;
+} 
+main .about-holder {
+  padding: 15vw calc(8vw + 2px);
+  color: #f8f8f8;
+  background-color: #161616;
+  width: 100%;
+}
+main #about h2 {
+  font-size: clamp(36px, 10vw, 100px);;
+}
+main #about p {
+  height: 500px;
 }
